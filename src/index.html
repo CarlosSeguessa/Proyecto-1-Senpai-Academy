@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Nexos</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline">Hello world!!!</h1>
+    <header class="flex flex-row h-[10vh] w-full bg-slate-100 items-center px-5 sm:px-32">
+        <img src="../assets/img/logo.png" alt="Logo" class="w-[200px] h-[30px] sm:h-[30px]">
+        <nav class="hidden sm:flex  justify-center">
+            <ul class="sm:w-[600px] flex flex-row items-center justify-center">
+                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold"><a href="#">Nosotros</a></li>
+                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold"><a href="#">Noticias</a></li>
+                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold"><a href="#">Ayuda</a></li>
+            </ul>
+        </nav>
+        <div class="hidden sm:flex w-full sm:justify-end">
+            <button class="w-[138px] h-[40px] bg-[#5227CC] text-white rounded-3xl">INGRESAR</button>
+        </div>
+        <div class="w-full flex justify-end items-center text-[40px] mr-[20px] sm:hidden">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <div class="relative bg-black sm:mx-1">
+        <img src="../assets/img/manos.jpg" alt="Header image" class="h-[27vh]  sm:h-[57vh] sm:w-full object-fill opacity-60 ">
+        <div class="absolute bottom-0 top-0 text-white w-full h-full">
+            <div class="flex flex-col items-center justify-center h-full w-full opacity-100">
+            <h2 class="text-2xl sm:text-5xl font-bold">¡Actúa para cambiar el mundo!</h2>
+            <br>
+            <p class="text-center">Fomentamos el vínculo entre empresas y organizaciones civiles para generar un  impacto positivo en la sociedad.</p>
+            <p class="text-center">Descubri diferentes maneras de involucrar tu organización con la sociedad.</p>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
