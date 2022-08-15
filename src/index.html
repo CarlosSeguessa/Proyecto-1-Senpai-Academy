@@ -16,19 +16,24 @@
         <img src="../assets/img/logo.png" alt="Logo" class="w-[200px] h-[30px] sm:h-[30px]">
         <nav class="hidden sm:flex  justify-center">
             <ul class="sm:w-[600px] flex flex-row items-center justify-center">
-                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold"><a href="#">Nosotros</a></li>
-                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold"><a href="#">Noticias</a></li>
-                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold"><a href="#">Ayuda</a></li>
+                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold hover:underline"><a href="#">Nosotros</a></li>
+                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold hover:underline"><a href="#">Noticias</a></li>
+                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold hover:underline"><a href="#">Ayuda</a></li>
             </ul>
         </nav>
         <div class="hidden sm:flex w-full sm:justify-end">
             <button class="login w-[138px] h-[40px] bg-[#5227CC] text-white rounded-3xl">INGRESAR</button>
         </div>
         <div class="w-full flex justify-end items-center text-[40px] mr-[20px] sm:hidden">
-            <i class="fa-solid fa-bars"></i>
+            <i id="hamburguer-button" class="fa-solid fa-bars cursor-pointer"></i>
         </div>
     </header>
-    <div class="relative bg-black sm:mx-1">
+    <div id="hamburguer-menu" class="fixed w-full z-10 sm:hidden">
+        <div class="h-60 bg-white  shadow-xl rounded-b-2xl">
+            <ul></ul>
+        </div>
+    </div>
+    <div class="relative bg-black ">
         <img src="../assets/img/manos.jpg" alt="Header image" class="h-[27vh]  sm:h-[57vh] sm:w-full object-fill opacity-60 ">
         <div class="absolute bottom-0 top-0 text-white w-full h-full">
             <div class="flex flex-col items-center justify-center h-full w-full opacity-100">
@@ -39,14 +44,14 @@
             </div>
         </div>
     </div>
-    <main>
-        <section class="">
+    <main class="w-full h-screen">
+        <section class="section-aboutus">
             
         </section>
         <section>
 
         </section>
-        <section>
+        <section class="section-contact">
 
         </section>
     </main>
@@ -55,7 +60,7 @@
             <div class="w-full rounded-2xl sm:rounded-l-2xl">
                 <div class="sm:hidden absolute flex w-96 text-white justify-between p-2">
                     <div class="flex cursor-pointer items-center ">
-                        <i class="fa-solid fa-arrow-left mr-4 text-xl "></i>
+                        <i class="arrow-close fa-solid fa-arrow-left mr-4 text-xl "></i>
                         <p>Volver atrás</p>
                     </div>
                     <div class="close-button" class="flex items-center cursor-pointer mr-2">
@@ -76,7 +81,7 @@
             </div>
             <div>
                 <div class="hidden sm:w-[360px] sm:flex sm:h-5 sm:m-5 sm:justify-between">
-                    <div class=" sm:flex sm:justify-center sm:items-center sm:cursor-pointer">
+                    <div class="arrow-close-dk sm:flex sm:justify-center sm:items-center sm:cursor-pointer">
                         <i class="fa-solid fa-arrow-left sm:mr-4 sm:text-xl"></i>
                         <p>Volver atrás</p>
                     </div>
