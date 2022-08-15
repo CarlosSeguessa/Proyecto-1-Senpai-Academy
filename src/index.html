@@ -97,32 +97,37 @@
             <h1 class="laboral">Llamados laborales</h1>
         </div>
     </section>
-   
-    <section class="flex flex-col w-full sm:grid sm:grid-cols-2 sm:auto-rows-min bg-[#fafafa] sm:px-32 ">
-        <div>
+   <div class="formulario">
+    <section class="flex flex-col w-full sm:flex-row  bg-[#fafafa] sm:px-24 ">
+        <div class="sm:w-[50%]">
             <img class="w-full sm:h-64" src="../assets/img/laptop-escritorio.jpg" alt="">
         </div>
-        <div>
+        <div class="sm:w-[50%]">
             <h2 class="text-center text-2xl mb-3">Contacto</h2>
-            <form class="flex flex-col items-center justify-center mx-4 sm:grid sm:grid-cols-3" action="">
-                <div class="sm:col-start-1  sm:w-64">
+            <div class="flex flex-col items-center justify-center mx-4 sm:flex-row sm:w-full ">
+                <div>
+                <div class="sm:w-64">
+            
                 <label for="User">Usuario</label>
                 <input class="w-full border-2 rounded-lg h-10" type="text" placeholder="Datos a completar" name="User" id="">
                 </div>
-                <div class="sm:col-start-1  sm:w-64">
+                <div class="sm:w-64">
                 <label for="Email">Email</label>
                 <input class="w-full border-2 rounded-lg h-10" type="text" placeholder="Datos a completar" name="Email" id="">
                 </div>
-                <div class="sm:col-start-3 sm:row-start-1 sm:row-span-2 sm:w-64">
-                <label for="Mensaje">Mensaje</label>
-                <textarea class="w-full border-2 resize-none rounded-lg sm:h-20 sm:col-start-3 " placeholder="Escribe otro mensaje aqui" name="Mensaje" id="" cols="20" rows="10"></textarea>
                 </div>
-                <div class="sm:col-start-2 sm:row-start-3">
+                <div class="sm:flex sm:flex-col sm:w-96 sm:ml-5">
+                <label for="Mensaje">Mensaje</label>
+                <textarea class="w-full border-2 resize-none rounded-lg sm:h-20 sm:w-64 " placeholder="Escribe otro mensaje aqui" name="Mensaje" id="" cols="30" rows="10"></textarea>
+                </div>
+                
+            </div>
+            <div class="sm:flex sm:w-full sm:items-center sm:justify-center">
                 <button class="bg-[#5227CC] text-white w-full h-10 mt-4 mb-4 rounded-lg shadow-lg  sm:w-32" type="submit">Enviar</button>
                 </div>
-            </form>
         </div>
     </section>
+    </div>
 </main>
       
     
