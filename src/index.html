@@ -1,131 +1,470 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<html lang="es" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Nexos</title>
-    <link rel="stylesheet" href="./main.css">
-</head>
-<body class="font-dmsans">
-    <header class="flex flex-row h-[10vh] w-full bg-slate-100 items-center px-5 sm:px-32">
-        <img src="../assets/img/logo.png" alt="Logo" class="w-[200px] h-[30px] sm:h-[30px]">
-        <nav class="hidden sm:flex  justify-center">
-            <ul class="sm:w-[600px] flex flex-row items-center justify-center">
-                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold hover:underline"><a href="#">Nosotros</a></li>
-                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold hover:underline"><a href="#">Noticias</a></li>
-                <li class="w-[120px] h-[40px] flex items-center justify-center font-bold hover:underline"><a href="#">Ayuda</a></li>
-            </ul>
-        </nav>
-        <div class="hidden sm:flex w-full sm:justify-end">
-            <button class="login w-[138px] h-[40px] bg-[#5227CC] text-white rounded-3xl">INGRESAR</button>
-        </div>
-        <div class="w-full flex justify-end items-center text-[40px] mr-[20px] sm:hidden">
-            <i id="hamburguer-button" class="fa-solid fa-bars cursor-pointer"></i>
-        </div>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body class="font-dmsans">
+    <header
+      class="flex flex-row h-[10vh] w-full bg-white items-center px-5 sm:px-32"
+    >
+      <img
+        src="../assets/img/logo.png"
+        alt="Logo"
+        class="w-[200px] h-[30px] sm:h-[30px]"
+      />
+      <nav class="hidden sm:flex justify-center">
+        <ul class="sm:w-[600px] flex flex-row items-center justify-center">
+          <li
+            class="w-[120px] h-[40px] flex items-center justify-center font-bold hover:underline"
+          >
+            <a href="#aboutus">Nosotros</a>
+          </li>
+          <li
+            class="w-[120px] h-[40px] flex items-center justify-center font-bold hover:underline"
+          >
+            <a href="#section-news">Noticias</a>
+          </li>
+          <li
+            class="w-[120px] h-[40px] flex items-center justify-center font-bold hover:underline"
+          >
+            <a href="#section-contact">Ayuda</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hidden sm:flex w-full sm:justify-end">
+        <button
+          class="logindk w-[138px] h-[40px] bg-[#5227CC] sm:hover:bg-[#7749F8] sm:transition-colors sm:duration-500 sm:ease-in-out text-white rounded-3xl"
+        >
+          INGRESAR
+        </button>
+      </div>
+      <div
+        class="w-full flex justify-end items-center text-[40px] mr-[20px] sm:hidden"
+      >
+        <i id="hamburguer-button" class="fa-solid fa-bars cursor-pointer"></i>
+      </div>
     </header>
-    <div id="hamburguer-menu" class="fixed w-full z-10 sm:hidden">
-        <div class="h-60 bg-white  shadow-xl rounded-b-2xl">
-            <ul></ul>
+    <div id="hamburguer-menu" class="absolute w-full z-10 sm:hidden">
+      <div class=" h-60 bg-white shadow-xl rounded-b-2xl w-full">
+        <ul class="w-full flex flex-col items-center justify-center">
+            <li
+            class="w-[120px] h-[40px] flex items-center justify-center font-bold my-2 sm:hover:underline"
+          >
+            <a id="aboutusmb" href="#aboutus">Nosotros</a>
+          </li>
+          <li
+            class="w-[120px] h-[40px] flex items-center justify-center font-bold my-2 sm:hover:underline"
+          >
+            <a id="news" href="#section-news">Noticias</a>
+          </li>
+          <li
+            class="w-[120px] h-[40px] flex items-center justify-center font-bold my-2 sm:hover:underline"
+          >
+            <a id="help" href="#section-contact">Ayuda</a>
+          </li>
+        </ul>
+        <div class="w-full flex items-center justify-center my-2">
+            <button
+          class="login w-[138px] h-[40px] bg-[#5227CC] text-white rounded-3xl"
+        >
+          INGRESAR
+        </button>
         </div>
+      </div>
     </div>
-    <div class="relative bg-black ">
-        <img src="../assets/img/manos.jpg" alt="Header image" class="h-[27vh]  sm:h-[57vh] sm:w-full object-fill opacity-60 ">
-        <div class="absolute bottom-0 top-0 text-white w-full h-full">
-            <div class="flex flex-col items-center justify-center h-full w-full opacity-100">
-            <h2 class="text-2xl sm:text-5xl font-bold">¡Actúa para cambiar el mundo!</h2>
+    <div class="relative bg-black">
+      <img
+        src="../assets/img/manos.jpg"
+        alt="Header image"
+        class="h-[27vh] sm:h-[57vh] sm:w-full object-fill opacity-60"
+      />
+      <div class="absolute bottom-0 top-0 text-white w-full h-full">
+        <div
+          class="flex flex-col items-center justify-center h-full w-full opacity-100"
+        >
+          <h2 class="text-2xl sm:text-5xl font-bold">
+            ¡Actúa para cambiar el mundo!
+          </h2>
+          <br />
+          <p class="text-center">
+            Fomentamos el vínculo entre empresas y organizaciones civiles para
+            generar un impacto positivo en la sociedad.
+          </p>
+          <p class="text-center">
+            Descubri diferentes maneras de involucrar tu organización con la
+            sociedad.
+          </p>
+        </div>
+      </div>
+    </div>
+    <main class="w-full h-full">
+      <section id="aboutus" class="section-aboutus bg-[#1C78FD] w-full grid grid-cols-1 auto-rows-auto sm:grid-cols-2 sm:justify-center sm:items-center sm:px-28 sm:py-28">
+        <div class="py-4">
+            <img class="px-4 rounded-md w-full h-48 sm:h-96 object-cover" src="../assets/img/oficina.png" alt="office">
+        </div>
+        <div class="py-4 px-2 text-white">
+            <p class="text-2xl sm:text-4xl text-center">Soluciones para empresas</p>
             <br>
-            <p class="text-center">Fomentamos el vínculo entre empresas y organizaciones civiles para generar un  impacto positivo en la sociedad.</p>
-            <p class="text-center">Descubri diferentes maneras de involucrar tu organización con la sociedad.</p>
+            <p class="text-center">Generamos un medio para que las empresas se involucren en actividades de responsabilidad social.</p>
+        </div>
+        <div class="py-4 sm:col-start-2">
+            <img class="px-4 rounded-md w-full h-48 sm:h-96 object-cover" src="../assets/img/voluntariado.jpg" alt="office">
+        </div>
+        <div class="py-4 px-2 text-white sm:col-start-1 sm:row-start-2">
+            <p class="text-2xl sm:text-4xl text-center">Soluciones para organizaciones</p>
+            <br>
+            <p class="text-center">Apoyamos a las organizaciones sociales para que alcancen sus objetivos. Ponemos a su disposición una comunidad de voluntarios dispuestos a apoyarlos en sus necesidades.
+                Equipos de voluntarios por empresas dispuestos a potenciar tu impacto en la sociedad.</p>
+        </div>
+      </section>
+      <section class="section-opportunities w-full bg[#fafafa] sm:flex sm:flex-col sm:items-center sm:justify-center">
+        <div class="p-4 sm:pt-28 sm:px-96">
+            <p class="text-2xl text-center sm:text-4xl">Encuentra las mejores oportunidades</p>
+            <br>
+            <p class="text-center">La plataforma cuenta con gran variedad de proyectos locales(sociales, educativos y medioambientales), donde encontraras el que mejor se adapte a la experiencia que estas buscando.
+                Te ayudamos en la coordinacion con la organizacion de forma simple y rapida.
+            </p>
+        </div>
+        <div class="cards w-full flex flex-col sm:flex-row items-center justify-center py-4">
+            <div class="card-container w-56 h-40 sm:hover:w-60 sm:hover:h-44 sm:duration-200 sm:ease-in p-4 bg-[#DC3545] rounded-2xl my-2 sm:mx-3 cursor-pointer">
+                <div class="flex flex-row items-center justify-end">
+                    <i class="fa-solid fa-plus text-white text-xl"></i>
+                </div>
+                <div class="card-icons  flex flex-row items-center">
+                    <img class="w-10 h-11" src="../assets/icons/icono-mano.png" alt="">
+                </div>
+                <div class="card-text mt-4">
+                    <p class="text-white text-xl">Ser voluntario</p>
+                </div>
+            </div>
+            <div class="card-container w-56 h-40 p-4 sm:hover:w-60 sm:hover:h-44 sm:duration-200 sm:ease-in bg-[#FF9C07] rounded-2xl my-2 sm:mx-3 cursor-pointer">
+                <div class="flex flex-row items-center justify-end">
+                    <i class="fa-solid fa-plus text-white text-xl"></i>
+                </div>
+                <div class="card-icons  flex flex-row items-center">
+                    <img class="w-11 h-11" src="../assets/icons/icono-mano-corazon.png" alt="">
+                </div>
+                <div class="card-text mt-4">
+                    <p class="text-white text-xl">Donar</p>
+                </div>
+            </div>
+            <div class="card-container w-56 h-40 p-4 sm:hover:w-60 sm:hover:h-44 sm:duration-200 sm:ease-in bg-[#28A745] rounded-2xl my-2 sm:mx-3 cursor-pointer">
+                <div class="flex flex-row items-center justify-end">
+                    <i class="fa-solid fa-plus text-white text-xl"></i>
+                </div>
+                <div class="card-icons  flex flex-row items-center">
+                    <img class="w-10 h-11" src="../assets/icons/icono-reciclar.png" alt="">
+                </div>
+                <div class="card-text mt-4">
+                    <p class="text-white text-xl">Reciclar</p>
+                </div>
+            </div>
+            <div class="card-container w-56 h-40 p-4 sm:hover:w-60 sm:hover:h-44 sm:duration-200 sm:ease-in bg-[#17A2B8] rounded-2xl my-2 sm:mx-3 cursor-pointer">
+                <div class="flex flex-row items-center justify-end">
+                    <i class="fa-solid fa-plus text-white text-xl"></i>
+                </div>
+                <div class="card-icons  flex flex-row items-center">
+                    <img class="w-10 h-11" src="../assets/icons/icono-maletin.png" alt="">
+                </div>
+                <div class="card-text mt-4">
+                    <p class="text-white text-xl">Llamados laborales</p>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section id="section-news" class="w-full bg-[#1C78FD] py-5 h-screen">
+        <div class=" text-white text-6xl text-center pt-8"><p class="">Noticias</p></div>
+        <div class=" text-white underline text-center"><p>ver mas</p></div>
+        <!--primera noticias-->
+        <div class="mx-10 sm:flex sm:justify-center"><!--contenedor de las noticias-->
+        <div class="bg-white h-[480px] mx-3 rounded-lg mt-4 sm:w-[400px] sm:h-[590px] sm:mx-4 sm:mt-10">
+            <div>
+                <div class="absolute flex mt-[190px] ml-3 bg-[#5227CC] text-white rounded-full w-[55px] justify-center mt-[150px] sm:mt-[220px]">
+                    <p>salud</p>
+                </div>
+                <img  class="rounded-lg" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""/>
+            </div>
+            <div class="flex items-center justify-between mt-2"> 
+            <div class="flex items-center">
+                <img src="../assets/icons/icono-calendario.png" class="ml-2">
+                <p class="ml-2">16/08/2022</p>
+            </div>
+            <div class="flex items-center">
+                <img src="../assets/icons/icono-reloj.png" class="mr-2">
+                <p class="mr-2">4 min</p>
+            </div>
+        </div>  
+            <div>
+                <p class="font-bold ml-2 mt-4 sm:mt-10 sm:text-2xl">Consejos para mejorar tu rutina!</p>
+                <p class="ml-2 mt-6 sm:mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quas similique voluptas temporibus beatae ipsa 
+                    voluptatibus quod repellendus.</p>
+            </div>
+            <div class="flex w-full items-center justify-end sm:mt-12">
+                <i class="fa-solid fa-arrow-right"></i>
+                <p class="underline ml-2 mr-4">ver mas</p>
+            </div>
+        </div>
+        <!--segunda noticia-->
+        <div class="hidden sm:flex sm:flex-col bg-white h-[480px] mx-3 rounded-lg mt-4 sm:w-[400px] sm:h-[590px] sm:mx-4  sm:mt-10">
+            <div>
+                <div class="absolute flex mt-[190px] ml-3 bg-[#5227CC] text-white rounded-full w-[90px] justify-center sm:mt-[220px]">
+                    <p>economia</p>
+                </div>
+                <img  class="rounded-lg" src="https://images.unsplash.com/photo-1604594849809-dfedbc827105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""/>
+            </div>
+            <div class="flex items-center justify-between mt-2"> 
+            <div class="flex items-center">
+                <img src="../assets/icons/icono-calendario.png" class="ml-2">
+                <p class="ml-2">16/08/2022</p>
+            </div>
+            <div class="flex items-center">
+                <img src="../assets/icons/icono-reloj.png" class="mr-2">
+                <p class="mr-2">4 min</p>
+            </div>
+        </div>  
+            <div>
+                <p class="font-bold ml-2 mt-4 sm:mt-10 sm:text-2xl">Tips para ahorra mas!</p>
+                <p class="ml-2 mt-6 sm:mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quas similique voluptas temporibus beatae ipsa 
+                    voluptatibus quod repellendus.</p>
+            </div>
+            <div class="flex w-full items-center justify-end sm:mt-12">
+                <i class="fa-solid fa-arrow-right"></i>
+                <p class="underline ml-2 mr-4">ver mas</p>
+            </div>
+        </div>
+        <!--tercera noticia-->
+        <div class="hidden sm:flex sm:flex-col bg-white h-[480px] mx-3 rounded-lg mt-4 sm:w-[400px] sm:h-[590px] sm:mx-4  sm:mt-10">
+            <div>
+                <div class="absolute flex mt-[190px] ml-3 bg-[#5227CC] text-white rounded-full w-[90px] justify-center sm:mt-[220px]">
+                    <p>comida</p>
+                </div>
+                <img  class="rounded-lg w-[400px] h-[265px]" src="https://placeralplato.com/files/2015/07/pastaflora-640x480.jpg?width=1200&enable=upscale" alt=""/>
+            </div>
+            <div class="flex items-center justify-between mt-2"> 
+            <div class="flex items-center">
+                <img src="../assets/icons/icono-calendario.png" class="ml-2">
+                <p class="ml-2">16/08/2022</p>
+            </div>
+            <div class="flex items-center">
+                <img src="../assets/icons/icono-reloj.png" class="mr-2">
+                <p class="mr-2">4 min</p>
+            </div>
+        </div>  
+            <div>
+                <p class="font-bold ml-2 mt-4 sm:mt-10 sm:text-2xl">Pastaflora es mejor que jesuitas</p>
+                <p class="ml-2 mt-6 sm:mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quas similique voluptas temporibus beatae ipsa 
+                    voluptatibus quod repellendus.</p>
+            </div>
+            <div class="flex w-full items-center justify-end sm:mt-12">
+                <i class="fa-solid fa-arrow-right"></i>
+                <p class="underline ml-2 mr-4">ver mas</p>
+            </div>
+        </div>
+        <!--cuarta noticia-->
+        <div class=" hidden sm:flex sm:flex-col bg-white h-[480px] mx-3 rounded-lg mt-4 sm:w-[400px] sm:h-[590px] sm:mx-4 sm:mt-10">
+            <div>
+                <div class="absolute flex mt-[190px] ml-3 bg-[#5227CC] text-white rounded-full w-[90px] justify-center sm:mt-[220px]">
+                    <p>mascota</p>
+                </div>
+                <img  class="rounded-lg w-[400px] h-[265px]" src="https://www.infobae.com/new-resizer/dZXU2DYcutJcSYrQybriQzTVZgY=/1200x900/filters:format(webp):quality(85)//cloudfront-us-east-1.images.arcpublishing.com/infobae/MJ7WLFDBIBDATHKJGSJQI6N5XE.jpg" alt=""/>
+            </div>
+            <div class="flex items-center justify-between mt-2"> 
+            <div class="flex items-center">
+                <img src="../assets/icons/icono-calendario.png" class="ml-2">
+                <p class="ml-2">16/08/2022</p>
+            </div>
+            <div class="flex items-center">
+                <img src="../assets/icons/icono-reloj.png" class="mr-2">
+                <p class="mr-2">4 min</p>
+            </div>
+        </div>  
+            <div>
+                <p class="font-bold ml-2 mt-4 sm:mt-10 sm:text-2xl">Consejos para cuidar tu mascota</p>
+                <p class="ml-2 mt-6 sm:mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quas similique voluptas temporibus beatae ipsa 
+                    voluptatibus quod repellendus.</p>
+            </div>
+            <div class="flex w-full items-center justify-end sm:mt-12">
+                <i class="fa-solid fa-arrow-right"></i>
+                <p class="underline ml-2 mr-4">ver mas</p>
             </div>
         </div>
     </div>
-    <main class="w-full h-screen">
-        <section class="section-aboutus">
-            
-        </section>
-        <section>
-
-        </section>
-        <section class="section-contact">
-
-        </section>
+    <!--contenedor de los puntitos-->
+    <div class="flex w-full items-center justify-center mt-4">
+        <div><i class="fa-solid fa-circle  text-[#c1c5c1] text-3xl"></i>
+        </div>
+        <div class="mx-3"><i class="fa-solid fa-circle text-[#c1c5c1] text-3xl"></i>
+        </div>
+        <div><i class="fa-solid fa-circle text-[#c1c5c1] text-3xl"></i>
+        </div>
+    </div>
+      </section>
+      <section id="section-contact" class="w-full bg-[#fafafa] grid grid-cols-1 auto-cols-max p-2 sm:grid-cols-2 sm:p-24">
+        <div class="flex justify-center items-center sm:hidden">
+            <p class="font-bold text-2xl m-4">Contacto</p>
+        </div>
+        <div class="sm:col-start-1 sm:row-start-1">
+            <img src="../assets/img/laptop-escritorio.jpg" alt="">
+        </div>
+        <div class="sm:w-full sm:flex sm:flex-col sm:justify-center">
+          <div class="hidden sm:flex sm:justify-center sm:items-center ">
+            <p class="font-bold text-2xl sm:text-6xl m-4">Contacto</p>
+          </div>
+          <div class="sm:w-full sm:flex sm:flex-row sm:justify-center">
+          <div class="sm:flex sm:flex-col sm:justify-center">
+            <div class="flex flex-col justify-center items-center m-5">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" placeholder="Nombre" class="w-80 h-10 border-2 border-black rounded-2xl px-2">
+            </div>
+            <div class="flex flex-col justify-center items-center m-5">
+                <label for="name">Email</label>
+                <input type="text" name="name" placeholder="Email" class="w-80 h-10 border-2 border-black rounded-2xl px-2">
+            </div>
+          </div>
+            <div class="flex flex-col justify-center items-center m-5">
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" class="w-80 h-20 p-3 border-2 border-black rounded-2xl"></textarea>
+            </div>
+          </div>
+          <div class="w-full flex justify-center items-center">
+            <button class="w-40 bg-[#5227CC] text-white rounded-lg h-8 sm:hover:bg-[#7749F8] sm:transition-colors sm:duration-500 sm:ease-in-out">Enviar</button>
+          </div>
+        </div>
+      </section>
     </main>
     <div id="modal-container" class="hidden bg-black bg-opacity-60 fixed inset-0 flex items-center justify-center">
-        <div class="w-96 bg-[#f7f9f4] h-[720px] shadow-xl rounded-2xl flex flex-col sm:w-[800px] sm:h-[500px] sm:grid sm:grid-cols-2">
-            <div class="w-full rounded-2xl sm:rounded-l-2xl">
-                <div class="sm:hidden absolute flex w-96 text-white justify-between p-2">
-                    <div class="flex cursor-pointer items-center ">
-                        <i class="arrow-close fa-solid fa-arrow-left mr-4 text-xl "></i>
-                        <p>Volver atrás</p>
-                    </div>
-                    <div class="close-button" class="flex items-center cursor-pointer mr-2">
-                        <i class="fa-solid fa-xmark text-2xl"></i>
-                    </div>
-                </div>
-                <img src="../assets/img/imagen-modal.JPG" alt="modal img"
-                class=
-                "
-                w-full 
-                h-96 
-                object-cover 
-                rounded-t-2xl 
-                sm:rounded-l-2xl 
-                sm:rounded-r-none 
-                sm:h-[500px]
-                ">
+      <div
+        class="w-96 bg-[#f7f9f4] h-[720px] shadow-xl rounded-2xl flex flex-col sm:w-[800px] sm:h-[500px] sm:grid sm:grid-cols-2">
+        <div class="w-full rounded-2xl sm:rounded-l-2xl">
+          <div class="sm:hidden absolute flex w-96 text-white justify-between p-2">
+            <div class="arrow-close flex cursor-pointer items-center">
+              <i class="fa-solid fa-arrow-left mr-4 text-xl"></i>
+              <p>Volver atrás</p>
             </div>
-            <div>
-                <div class="hidden sm:w-[360px] sm:flex sm:h-5 sm:m-5 sm:justify-between">
-                    <div class="arrow-close-dk sm:flex sm:justify-center sm:items-center sm:cursor-pointer">
-                        <i class="fa-solid fa-arrow-left sm:mr-4 sm:text-xl"></i>
-                        <p>Volver atrás</p>
-                    </div>
-                    <button class="close-button-dk sm:flex sm:items-center sm:cursor-pointer">
-                        <i class="fa-solid fa-xmark sm:text-xl"></i>
-                    </button>
-                </div>
-            <div class="mt-2 w-full h-6 flex justify-center items-center sm:col-start-2">
+            <div
+              class="close-button"
+              class="flex items-center cursor-pointer mr-2"
+            >
+              <i class="fa-solid fa-xmark text-2xl"></i>
+            </div>
+          </div>
+          <img
+            src="../assets/img/imagen-modal.JPG"
+            alt="modal img"
+            class="w-full h-96 object-cover rounded-t-2xl sm:rounded-l-2xl sm:rounded-r-none sm:h-[500px]"
+          />
+        </div>
+        <div>
+          <div
+            class="hidden sm:w-[360px] sm:flex sm:h-5 sm:m-5 sm:justify-between"
+          >
+            <div
+              class="arrow-close-dk sm:flex sm:justify-center sm:items-center sm:cursor-pointer"
+            >
+              <i class="fa-solid fa-arrow-left sm:mr-4 sm:text-xl"></i>
+              <p>Volver atrás</p>
+            </div>
+            <button
+              class="close-button-dk sm:flex sm:items-center sm:cursor-pointer"
+            >
+              <i class="fa-solid fa-xmark sm:text-xl"></i>
+            </button>
+          </div>
+          <div
+            class="mt-2 w-full h-6 flex justify-center items-center sm:col-start-2"
+          >
             <h3 class="text-2xl font-bold">REGISTRAR</h3>
+          </div>
+          <div class="w-full px-4">
+            <div
+              class="flex flex-row w-[350px] h-32 bg-white mt-3 rounded-2xl shadow-xl sm:mt-16 sm:w-full"
+            >
+              <div
+                class="bg-[#5298FF] w-[98px] rounded-l-2xl flex items-center justify-center"
+              >
+                <i class="fa-solid fa-briefcase text-white text-2xl"></i>
+              </div>
+              <div class="w-full flex flex-col py-5 px-6 sm:p-6 justify-center">
+                <p class="text-2xl text-[#5298FF] font-bold">MI EMPRESA</p>
+                <p>Breve explicación a lo que nos referimos</p>
+                <div class="w-full flex justify-end">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
             </div>
-            <div class="w-full px-4">
-            <div class="flex flex-row w-[350px] h-32 bg-white mt-3 rounded-2xl shadow-xl sm:mt-16 sm:w-full">
-                <div class=" bg-[#5298FF] w-[98px] rounded-l-2xl flex items-center justify-center">
-                    <i class="fa-solid fa-briefcase text-white text-2xl"></i>
+            <div
+              class="flex flex-row w-[350px] h-32 bg-white mt-3 rounded-2xl shadow-xl sm:mx-0 sm:w-full"
+            >
+              <div
+                class="bg-[#7749F8] w-[98px] rounded-l-2xl flex items-center justify-center"
+              >
+                <i class="fa-solid fa-user-large text-white text-2xl"></i>
+              </div>
+              <div class="w-full flex flex-col py-5 px-6">
+                <p class="text-2xl text-[#7749F8] font-bold">MI ORGANIZACIÓN</p>
+                <p>Estamos para ayudarlos a tener exito.</p>
+                <div class="w-full flex justify-end">
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
-                <div class="w-full flex flex-col py-5 px-6  sm:p-6 justify-center">
-                    <p class="text-2xl text-[#5298FF] font-bold">MI EMPRESA</p>
-                    <p>Breve explicación a lo que nos referimos</p>
-                    <div class="w-full flex justify-end">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-                
+              </div>
             </div>
-            <div class="flex flex-row w-[350px] h-32 bg-white mt-3 rounded-2xl shadow-xl sm:mx-0 sm:w-full">
-                <div class="bg-[#7749F8] w-[98px] rounded-l-2xl flex items-center justify-center">
-                    <i class="fa-solid fa-user-large text-white text-2xl"></i>
-                </div>
-                <div class="w-full flex flex-col py-5 px-6">
-                    <p class="text-2xl text-[#7749F8] font-bold">MI ORGANIZACIÓN</p>
-                    <p>Estamos para ayudarlos a tener exito.</p>
-                    <div class="w-full flex justify-end">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
     </div>
-        
-    <footer>
-        
+    <footer
+      class="w-full flex flex-col border-t-8 border-[#5227CC] bg-gradient-to-r from-[#7749F8] to-[#5227CC] rounded-b-lg"
+    >
+      <section class="sm:grid sm:grid-cols-5">
+        <div>
+          <div class="p-4 sm:col-start-1">
+            <a href="#"><img class="sm:pl-44" src="../assets/img/logo-blanco.png" alt=" logo blanco" /></a>
+          </div>
+        </div>
+        <div class="w-full sm:col-start-2">
+          <ul class="text-white flex sm:flex-col">
+            <li class="mx-2 underline text-sm sm:no-underline"><a href="#aboutus">Nosotros</a></li>
+            <li class="mx-2 underline text-sm sm:no-underline"><a href="#section-news">Noticias</a></li>
+            <li class="mx-2 underline text-sm sm:no-underline"><a href="#section-contact">Contacto</a></li>
+            <li class="sm:mx-2 underline text-sm sm:no-underline"><a href="#">Terminos y condiciones</a></li>
+          </ul>
+        </div>
+        <div
+          class="flex w-full items-center justify-center text-white flex-col sm:col-start-5">
+          <div>
+            <h3>Seguinos!</h3>
+          </div>
+          <div class="flex w-full flex-row justify-center items-center">
+            <a href="#"><i class="fa-brands fa-facebook text-xl"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter mx-5 sm:mx-2 text-xl"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram text-xl"></i></a>
+          </div>
+        </div>
+
+        <div
+          class="flex w-full justify-center items-center border-t-2 border-white h-10 sm:col-span-5 sm:mt-4"
+        >
+          <p>Copyright 2022 © NEXOS</p>
+        </div>
+      </section>
     </footer>
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>
