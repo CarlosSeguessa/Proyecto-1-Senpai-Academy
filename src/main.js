@@ -23,7 +23,7 @@ hamburguerMenu.classList.add('hidden');
 const closeOpenModal = (metodo,classes) => {
     if (metodo === 'add') {
         modal.classList.add(...classes);
-    }else if (metodo === 'remove') {
+    }else {
         modal.classList.remove(...classes);
     }
 }
